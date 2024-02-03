@@ -1,3 +1,8 @@
+---
+name: MeerkatPatrol
+type: android-tv-app
+tags: [android_tv, kotlin, rtsp, jetpack_compose, exoplayer]
+---
 # MeerkatPatrol - android tv ip camera client
 
 Android TV rtsp streaming client. Very simple application to view "real time" stream from ip camera.
@@ -12,4 +17,3 @@ To implement:
 - stream load optimization
 - optimization test
 - implement onvif to be able to move camera using tv controller
-
