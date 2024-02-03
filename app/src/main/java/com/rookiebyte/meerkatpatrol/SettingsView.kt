@@ -29,7 +29,7 @@ import androidx.tv.material3.Text
 @Composable
 fun SettingsView(navController: NavHostController) {
     val context = LocalContext.current
-    var newUrl by remember { mutableStateOf("") }
+    var newUrl by remember { mutableStateOf(AppPreferences(context).getUrl() ?: "") }
 
     ConstraintLayout(
         modifier = Modifier.fillMaxSize()
@@ -39,10 +39,13 @@ fun SettingsView(navController: NavHostController) {
         TextField(value = newUrl,
             singleLine = true,
             onValueChange = { newUrl = it },
-            modifier = Modifier.fillMaxWidth().padding(10.dp).constrainAs(textRef) {
-                centerHorizontallyTo(parent)
-                centerVerticallyTo(parent)
-            }
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(10.dp)
+                .constrainAs(textRef) {
+                    centerHorizontallyTo(parent)
+                    centerVerticallyTo(parent)
+                }
         )
 
         Button(
