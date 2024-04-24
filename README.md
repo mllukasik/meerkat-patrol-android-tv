@@ -1,9 +1,3 @@
----
-portfolio_id: rookiebyte
-type: android-tv-app
-tags: [android_tv, kotlin, rtsp, jetpack_compose, exoplayer]
----
-
 # MeerkatPatrol - android tv ip camera client
 
 Android TV rtsp streaming client. Very simple application to view "real time" stream from ip camera.
